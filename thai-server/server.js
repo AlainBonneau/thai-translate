@@ -5,7 +5,6 @@ import translate from "translate";
 import { transliterate } from "transliteration";
 import "dotenv/config";
 
-// Initialisation Express
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -16,10 +15,7 @@ translate.engine = "google";
 // Fonction pour traduire et translittérer
 async function translateAndRomanize(text) {
   try {
-    // 1️⃣ Traduction du français vers le thaï
     const thaiText = await translate(text, { from: "fr", to: "th" });
-
-    // 2️⃣ Translittération en phonétique lisible
     const romanizedText = transliterate(thaiText);
 
     return { thai: thaiText, francise: romanizedText };
@@ -29,7 +25,6 @@ async function translateAndRomanize(text) {
   }
 }
 
-// Route API pour la traduction
 app.post("/translate", async (req, res) => {
   const { text } = req.body;
   if (!text) {
@@ -40,7 +35,6 @@ app.post("/translate", async (req, res) => {
   return res.json(result);
 });
 
-// Lancer le serveur
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);

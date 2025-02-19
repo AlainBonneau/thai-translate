@@ -5,6 +5,7 @@ export default function App() {
   const [text, setText] = useState("");
   const [result, setResult] = useState({ thai: "", francise: "" });
 
+  // Fonction pour traduire le texte en thaï et en français
   const handleTranslate = async () => {
     if (text.trim() === "") return;
 
@@ -17,7 +18,7 @@ export default function App() {
 
       setResult(response.data);
     } catch (error) {
-      console.error("❌ Erreur avec le serveur :", error);
+      console.error("Erreur avec le serveur :", error);
       setResult({ thai: "Erreur", francise: "..." });
     }
   };
@@ -46,7 +47,7 @@ export default function App() {
               🇹🇭 Thaï : {result.thai}
             </p>
             <p className="text-lg font-semibold text-gray-800">
-              🔠 Francisé : {result.francise}
+              🇫🇷 Français : {result.francise}
             </p>
           </div>
         )}
