@@ -16,53 +16,6 @@ Ce projet est une application **React + Node.js** permettant de traduire des phr
 
 ---
 
-## ⚙️ Installation
-
-### 1️⃣ **Cloner le projet**
-
-```bash
-git clone https://github.com/ton-utilisateur/ton-repo.git
-cd thai-translate
-```
-
-### 2️⃣ **Installation des dépendances**
-
-#### **Backend**
-
-```bash
-cd thai-server
-npm install
-```
-
-#### **Frontend**
-
-```bash
-cd ../thai-react
-npm install
-```
-
-### 3️⃣ **Lancer l'application**
-
-#### **Démarrer le serveur backend**
-
-```bash
-cd thai-server
-node server.js
-```
-
-✅ Serveur lancé sur `http://localhost:5000`
-
-#### **Démarrer le client React**
-
-```bash
-cd ../thai-react
-npm run dev
-```
-
-✅ Application disponible sur `http://localhost:5173`
-
----
-
 ## 🔧 Technologies utilisées
 
 - **React.js** (Vite + TailwindCSS)
@@ -91,21 +44,8 @@ npm run dev
 
 ---
 
-## 🤝 Contribuer
-
-Les contributions sont les bienvenues !
-
-1. **Fork** le projet
-2. Crée une nouvelle **branche** : `git checkout -b feature-nouvelle-fonctionnalité`
-3. Fais tes modifications puis **commit** : `git commit -m "Ajout de ..."`
-4. **Push** vers ton fork : `git push origin feature-nouvelle-fonctionnalité`
-5. Crée une **Pull Request** 🚀
-
----
-
 ## 📩 Contact
 
-📧 **Email** : [tonemail@example.com](mailto:tonemail@example.com)  
-🌐 **Github** : [@ton-utilisateur](https://github.com/ton-utilisateur)
+🌐 **Website** : [@myWebsite](https://www.alain-web.fr/)
 
 💡 **Merci d'utiliser cette application !** 🙌
