@@ -4,6 +4,8 @@ Ce projet est une application **React + Node.js** permettant de traduire des phr
 
 🚀 **Objectif** : Offrir une **traduction instantanée** avec une écriture adaptée pour les francophones souhaitant apprendre ou communiquer en thaï.
 
+### **⚠️ Attention** : Ce projet est encore en bêta et peut présenter plusieurs bugs.
+
 ---
 
 ## 📌 Fonctionnalités
