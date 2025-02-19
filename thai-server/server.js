@@ -20,7 +20,7 @@ async function translateAndRomanize(text) {
 
     return { thai: thaiText, francise: romanizedText };
   } catch (error) {
-    console.error("❌ Erreur avec la traduction :", error);
+    console.error("Erreur avec la traduction :", error);
     return { thai: "Erreur", francise: "..." };
   }
 }
@@ -37,5 +37,5 @@ app.post("/translate", async (req, res) => {
 
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);
+  console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
