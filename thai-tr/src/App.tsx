@@ -1,13 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
+import ModalError from "./components/ModalError";
 
 export default function App() {
   const [text, setText] = useState("");
   const [result, setResult] = useState({ thai: "", francise: "" });
+  const [modal, setModal] = useState(false);
 
   // Fonction pour traduire le texte en thaï et en français
   const handleTranslate = async () => {
-    if (text.trim() === "") return;
+    if (text.trim() === "") {
+      setModal(true);
+      return;
+    }
 
     setResult({ thai: "Traduction en cours...", francise: "..." });
 
@@ -25,6 +30,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+      {modal && <ModalError onClose={() => setModal(false)} />}
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-4">
           Traducteur Français → Thaï
