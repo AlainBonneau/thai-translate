@@ -1,8 +1,8 @@
 function MyNavbar() {
   return (
-    <nav>
-      <p></p>
-    </nav>
+    <header className="bg-customred-500 text-white p-4">
+      <nav className=""></nav>
+    </header>
   );
 }
 
