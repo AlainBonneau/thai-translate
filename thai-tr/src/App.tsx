@@ -31,19 +31,22 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-customwhite-500">
-      <MyNavbar />
+    <div className="flex flex-col min-h-screen w-full">
+      <div className="bg-customred-500">
+        <MyNavbar />
+      </div>
       {modal && <ModalError onClose={() => setModal(false)} />}
-      <div className="flex-grow flex flex-col items-center justify-center w-full px-4">
-        <div className="bg-customblue-500 shadow-xl rounded-xl p-8 w-full max-w-md">
-          <h1 className="text-3xl font-bold text-center mb-6 text-customwhite-500">
+      <div className="bg-customwhite-500 h-16 w-full"></div>
+      <div className="flex-grow w-full bg-customblue-500 flex items-center justify-center px-4 relative">
+        <div className="bg-customwhite-500 shadow-xl rounded-xl p-8 w-full max-w-md z-10">
+          <h1 className="text-3xl font-bold text-center mb-6 text-customblue-500">
             Traducteur Français → Thaï
           </h1>
           <textarea
             placeholder="Écris ta phrase ici..."
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="w-full p-3 border border-customwhite-500 rounded-lg bg-transparent text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-customwhite-500"
+            className="w-full p-3 border border-customblue-500 rounded-lg bg-transparent text-gray-900 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-customblue-500"
           />
           <button
             onClick={handleTranslate}
@@ -52,7 +55,7 @@ export default function App() {
             Traduire
           </button>
           {result.thai && (
-            <div className="mt-6 p-4 bg-customwhite-500 rounded-lg shadow-md">
+            <div className="mt-6 p-4 bg-gray-100 rounded-lg shadow-md">
               <p className="text-lg font-semibold text-customblue-500">
                 🇹🇭 Thaï : {result.thai}
               </p>
@@ -63,7 +66,10 @@ export default function App() {
           )}
         </div>
       </div>
-      <MyFooter />
+      <div className="bg-customwhite-500 h-16 w-full"></div>
+      <div className="bg-customred-500">
+        <MyFooter />
+      </div>
     </div>
   );
 }
