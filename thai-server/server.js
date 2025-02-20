@@ -25,6 +25,10 @@ async function translateAndRomanize(text) {
   }
 }
 
+app.get("/", (req, res) => {
+  res.send("Api de traduction Thailandais - Français");
+});
+
 app.post("/translate", async (req, res) => {
   const { text } = req.body;
   if (!text) {
